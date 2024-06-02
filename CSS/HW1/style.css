@@ -41,6 +41,10 @@ h1 {
     height: 80%;
 }
 
+/* #buttons:hover{
+    color: black;
+} */
+
 #signin {
     background: red;
     padding: 8px 14px;
@@ -64,3 +68,5 @@ p {
 #p2 {
     font-size: 23px;
 }
+
+
