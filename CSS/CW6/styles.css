@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: rgb(28, 145, 100);
+}
+
+h2 {
+    font-size: 3em;
+    text-align: center;
+    background-color: black;
+    /* color: linen; */
+    color: rgb(28, 145, 100);
+    letter-spacing: 2px;
+    font-weight: lighter;
+    position: fixed;
+    width: 110vw;
+    margin: -83px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 83px 23px;
+}
+
+h5 {
+    text-align: center;
+    margin: auto;
+    color: black;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 4px;
+}
+
+
+
+img {
+    /* padding: 32px; */
+    border-radius: 23px;
+    /* border: 2px solid currentColor; */
+    box-shadow: 0px 2px 6px 0.3px black;
+    width: 36vw;
+    height: 33vh;
+}
