@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 53vw;
+    height: 80vh;
+}
+
+.up {
+    background: orange;
+    width: 53vw;
+    height: 22vh;
+}
+
+.down {
+    background: orangered;
+    width: 53vw;
+    display: flex;
+    height: 58vh;
+}
+
+.img {
+    width: 24vw;
+    height: 58vh;
+    background-image: url("Haikyuu.jfif");
+    background-size: cover;
+    display: inline-block;
+    box-shadow: 0px 0px 13px black;
+    margin-top: -53px;
+    margin-left: 77px;
+}
+
+.cont {
+    align-items: center;
+}
+
+.hi {
+    margin-top: 17px;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    font-size: 2.8em;
+}
+
+.vop {
+    font-family: "Playfair Display", serif;
+    margin-top: 28px;
+    font-size: 1.4em;
+    text-align: center;
+
+}
+
+#anime {
+    color: orangered;
+    letter-spacing: 0.6em;
+    border-radius: 6px 12px;
+    text-align: center;
+    font-size: 1.4em;
+    margin: 36px 154px;
+    padding: 0;
+    background: #000;
+    font-family: "Teko", sans-serif;
+}
+
+#anime:hover {
+    background: orange;
+    color: #000;
+    transition: .6s ease-in;
+    cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 3px) and (max-width: 956px) {
+    .container {
+        width: 90vw;
+        height: auto;
+    }
+
+    .up {
+        width: 90vw;
+        height: 15vh;
+    }
+
+    .down {
+        width: 90vw;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .img {
+        width: 80vw;
+        height: 40vh;
+        margin-top: -20px;
+        margin-left: 0;
+    }
+
+    .hi {
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+    .vop {
+        font-size: 1.2em;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #anime {
+        font-size: 1.2em;
+        margin: 20px 0;
+        margin: 36px 144px;
+    }
+}
