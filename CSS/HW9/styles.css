@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 72vw;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+    transform: scaleY(20deg);
+}
+
+.box {
+    width: 43vw;
+    height: 57vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: center;
+    transform: perspective(900px) rotateY(23deg);
+    transition: 0.6s ease-in-out;
+    box-shadow: 0px 0px 4.5px grey;
+    border-radius: 12px;
+}
+
+.box1 {
+    background-image: url("Saitama.png");
+}
+
+.box2 {
+    background-image: url("Kakashi.jfif");
+}
+
+.box3 {
+    background-image: url("Goku.jfif");
+}
+
+.container:hover .box {
+    opacity: 0.17;
+}
+
+.container .box:hover {
+    transform: perspective(780px) rotateY(0deg);
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
