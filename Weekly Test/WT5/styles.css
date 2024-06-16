@@ -37,6 +37,10 @@
     cursor: pointer;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 /* Box 2 */
 .add-first {
     color: #cccccc;
@@ -159,15 +163,16 @@ span {
     align-items: center;
     justify-content: center;
     font-size: 0.85rem;
-    /* bottom: 25px; */
-    /* position: relative; */
-    /* width: 80%; */
     width: 97.6%;
     margin-bottom: 25px;
 }
 
 .hero-msg a {
     color: #007185;
+}
+
+.hero-msg a:hover {
+    color: rgb(167, 48, 40);
 }
 
 /* Shop Section */
@@ -179,13 +184,10 @@ span {
 }
 
 .box {
-    /* border: 2px solid black; */
     height: 400px;
     width: 23.46%;
     background-color: white;
     padding: 20px 0px 15px;
-    /* margin-top: -0.3rem; */
-    /* margin-top: 12px; */
     margin-bottom: 1.4rem;
     transition: 0.8s ease-in;
 }
@@ -198,7 +200,6 @@ span {
 .box-img {
     height: 300px;
     background-size: cover;
-    /* object-fit: contain; */
     margin-top: 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
@@ -209,16 +210,10 @@ span {
     margin-right: 1rem;
 }
 
-/* .box-content p {
-    color: #007185;
-} */
-
 .box-content p a {
     color: #007185;
     text-decoration: none;
-    cursor: pointer;
 }
-
 
 /* Last */
 .last {
@@ -250,21 +245,22 @@ span {
 }
 
 .last-content button {
-    background-color: gold;
-    border: none;
+    background-image: url(https://m.media-amazon.com/images/S/sash/vfqcwUkuArEiwD2.png);
+    background-position: -10px -170px;
     width: 16.3%;
     height: 30px;
-    font-size: 12px;
-    border-radius: 7px;
+    border: none;
+    border-radius: 4px;
     margin-top: 7px;
     margin-bottom: 6px;
-    font-weight: bolder;
+    font-size: 12px;
+    font-weight: 551;
+    cursor: pointer;
 }
 
 #para {
     font-size: 11px;
     color: #0f1111;
-    /* font-weight: ; */
 }
 
 
@@ -272,12 +268,14 @@ span {
     color: #007185;
 }
 
+#para a:hover {
+    color: rgb(167, 48, 40);
+}
 
 /* Footer */
 footer {
     margin-top: 15px;
 }
-
 
 .foot-panel1 {
     background-color: #37475a;
@@ -289,10 +287,14 @@ footer {
     font-size: 0.85rem;
 }
 
+.foot-panel1:hover {
+    background-color: #4b5868;
+}
+
 .foot-panel2 {
     background-color: #222f3d;
     color: white;
-    height: 300px;
+    height: 343px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -311,7 +313,7 @@ ul a {
 .foot-panel3 {
     background-color: #222f3d;
     color: white;
-    border-top: 0.5px solid white;
+    border-top: 0.5px solid rgb(90, 89, 89);
     height: 70px;
     display: flex;
     justify-content: center;
