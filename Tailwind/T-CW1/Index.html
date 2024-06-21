@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .ho li:hover {
+            box-shadow: 2px 2px rgb(244, 104, 10);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-300">
+
+    <div class="h-80 w-3/6 mt-40 m-auto shadow-2xl">
+        <div class="h-1/3 bg-emerald-700 text-white ">
+            <img src="https://img.freepik.com/premium-photo/frontal-presentation-blank-tshirt-mock-up-set-against-genuine-backdrop_1073912-3308.jpg?size=626&ext=jpg&ga=GA1.1.2054105442.1718931419&semt=ais_user"
+                alt="IMG1" class="absolute h-56 mt-10 w-52 ml-6" style="box-shadow: 5px 5px  rgb(244, 104, 10);">
+            <h1 class="font-bold text-2xl text-black pt-6 pl-64 ml-5 font-serif">Men's &nbsp;T-shirt</h1>
+            <span class="pl-64 ml-4 text-xl font-semibold text-black tracking-tight ">$219.00</span>
+            <span class="pl-2 ml-1 text-xl text-orange-500 drop-shadow-3xl tracking-tight font-bold font-mono">IN
+                STOCK</span>
+        </div>
+
+        <div class="h-2/3 ml-64 ">
+            <ul class="grid grid-cols-6 mr-1 mt-5 text-center ho">
+                <li class="p-2 transition duration-300 ease-out hover:ease-in cursor-pointer bg-emerald-700 font-bold text-white border-black ml-5"
+                    style="box-shadow: 2px 2px rgb(244, 104, 10);">
+                    XS</li>
+                <li
+                    class="p-2 transition duration-300 ease-out hover:ease-in cursor-pointer border-2 border-slate-600 hover:bg-emerald-700  font-bold hover:text-white ml-5">
+                    S</li>
+                <li
+                    class="p-2 transition duration-300 ease-out hover:ease-in cursor-pointer border-2 border-slate-600  hover:bg-emerald-700  font-bold hover:text-white ml-5">
+                    M</li>
+                <li
+                    class="p-2 transition duration-300 ease-out hover:ease-in cursor-pointer border-2 border-slate-600  hover:bg-emerald-700  font-bold hover:text-white ml-5">
+                    L</li>
+                <li
+                    class="p-2 transition duration-300 ease-out hover:ease-in cursor-pointer border-2 border-slate-600  hover:bg-emerald-700 font-bold hover:text-white ml-5">
+                    XL</li>
+            </ul>
+
+            <ul class="grid grid-cols-10 gap-2 mt-10 mr-6 justify-center  font-bold pr-8 size-max">
+                <button
+                    class="p-3 flex items-center justify-center col-span-4 cursor-pointer bg-orange-500 text-black border-2 border-black ml-5">
+                    BUY NOW
+                </button>
+                <button
+                    class="flex items-center justify-center gap-3 col-span-5 cursor-pointer hover:bg-orange-500 border-2 border-slate-500 hover:border-black   ml-5 transition duration-300 ease-out hover:ease-in">
+                    <svg class=" size-5" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
+                    </svg>
+                    ADD TO BAG
+                </button>
+                <li class="flex items-center justify-center ml-4 content-center"><svg class="size-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                    </svg></li>
+            </ul>
+
+            <p class=" mt-4 ml-6 tracking-widest font-semibold">Free shipping on all continential US orders.</p>
+        </div>
+    </div>
+</body>
+
+</html>
