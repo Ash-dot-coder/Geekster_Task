@@ -1,4 +1,3 @@
-// script.js
 const Products = [
     { id: 1, name: 'Earpod-Skin', price: 100 },
     { id: 2, name: 'Mobile-Case', price: 200 },
