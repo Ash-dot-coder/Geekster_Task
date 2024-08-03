@@ -1,8 +1,8 @@
 // script.js
 const Products = [
-    { id: 1, name: 'Wrist-Band', price: 100 },
-    { id: 2, name: 'Yoga-Mat', price: 200 },
-    { id: 3, name: 'Mobile-Skin', price: 300 },
+    { id: 1, name: 'Earpod-Skin', price: 100 },
+    { id: 2, name: 'Mobile-Case', price: 200 },
+    { id: 3, name: 'Laptop-Skin', price: 300 },
 ];
 
 const cart = {};
