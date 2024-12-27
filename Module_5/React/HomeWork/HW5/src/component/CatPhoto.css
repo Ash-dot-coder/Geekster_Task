@@ -1,0 +1,12 @@
+.photos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.photos img{
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    
+}
