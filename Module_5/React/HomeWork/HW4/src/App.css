@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+  background-color: black;
+}
+.favMovie{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 50px;
+}
