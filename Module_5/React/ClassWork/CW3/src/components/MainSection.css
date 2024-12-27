@@ -1,0 +1,44 @@
+.main-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+}
+img{
+    width: 750px;
+    height: 550px;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.main-content h2{
+    font-size: 2rem;
+    color: black;
+    line-height: 1.5;
+    padding-right: 30px;
+}
+.main-content p{
+    font-weight: 300;
+    color: #747474;
+    padding-right: 30px;
+}
+.get-in-touch{
+    background-color: #2563EB;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-weight: 700;
+}
+.get-in-touch:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid gray;
+}

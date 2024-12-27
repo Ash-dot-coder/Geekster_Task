@@ -1,0 +1,59 @@
+.hero-section{
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.content-div{
+    width: 550px;
+}
+.content-div .title{
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+}
+h1 span{
+    color: #BE123C;
+}
+
+.content-div p{
+    /* width: 80%; */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.buttons .search-now{
+    background-color: #BE123C;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+}
+.buttons .know-more{
+    background-color: white;
+    color: #BE123C;
+    padding: 15px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+}
