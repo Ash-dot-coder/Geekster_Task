@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind | HW-1</title>
+  <link rel="stylesheet" href="output.css" />
+</head>
+
+<body>
+  <!-- Top-Nav-Section -->
+  <div id="topBar" class="w-full mt-[18px]  h-fit text-base flex justify-between">
+    <nav id="topLeft" class="flex px-[12px] fl text-base">
+      <ul class="logo flex">
+        <img src="./Assets/logo-topLeft.svg" alt="Logo" class="logo rounded-[50px] size-[32px] bg-green-400 p-[6px] mr-[8px]">
+        <h3 class="border-r-[1px] border-gray-500">Geekster &nbsp; &nbsp;</h3>
+      </ul>
+      <ul class="px-[18px] mr-5 cursor-pointer">Home</ul>
+      <ul class="px-[18px] mr-5 cursor-pointer">About Us</ul>
+      <ul class="px-[18px] mr-5 cursor-pointer">Contact Us</ul>
+      <ul class="px-[18px] mr-5 cursor-pointer">Map</ul>
+    </nav>
+    <!-- <nav id="topRight" class="h-fit  mr-[32px]"> -->
+      <button class="h-fit bg-gray size-[66px] mr-[37px] flex items-center cursor-pointer">
+        <h4 class="flex items-center bg-gray-100 justify-center text-center px-[18px] hover:bg-gray-200 rounded-[4px] cursor-pointer">Geek&nbsp;&nbsp;<img src="./Assets/arrow-topRight.svg" alt="ArrowImg" class="arrow size-[18px] text-white cursor-pointer"></h4>
+        <!-- <img src="./Assets/arrow-topRight.svg" alt="ArrowImg" class="arrow bg-red-300 text-white size-[21px]"> -->
+      </button>
+    <!-- </nav> -->
+  </div>
+
+  <!-- Hero-Section -->
+  <header class="flex items-center h-[680px]">
+    <!-- Left-Content -->
+    <div id="left flex-col">
+      <h2 class="paraHeading ml-[14px]  font-bold text-[2.3em] tracking-[2.7px]">Before they sold out</h2>
+      <h2 class="paraHeading ml-[14px]  font-bold text-[2.3em] tracking-[2.7px]"> readymade gluten</h2>
+      <p class="paraContent  ml-[14px] my-[18px] w-[82%]">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed
+        tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut
+        hexagon try-hard chambray.</p>
+      <div id="buttonResponse" class="flex ml-[14px]">
+        <button id="yes" class="p-[12px] mr-[14px] bg-green-400 w-[62px] rounded-[8px] text-white hover:bg-violet-600 cursor-pointer">Yes</button>
+        <button id="no"  class="p-[12px] ml-[14px] w-[62px] bg-gray-100 rounded-[8px] hover:bg-gray-200 cursor-pointer">No</button>
+      </div>
+    </div>
+    <!-- Right-Content -->
+    <div id="right" class="m-[16px]"><img src="./Assets/img-rightContent.avif" alt="ContentImage" class="rightContent"></div>
+  </header>
+  </div>
+</body>
+
+</html>
