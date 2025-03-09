@@ -51,4 +51,4 @@ This project uses the [Programming Hero Phone API](https://openapi.programming-h
 
 ## Demo
 
-Check out live demo here : [Live Demo]()
+Check out live demo here : [Live Demo](https://ash-dot-coder.github.io/Geekster_Task/Module_4/JavaScript/WeeklyTest/WT4/index.html)
