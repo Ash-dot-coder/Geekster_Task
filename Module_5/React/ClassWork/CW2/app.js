@@ -25,7 +25,7 @@ const paragraph = React.createElement(
       letterSpacing: ".052em",
     },
   },
-  "This is my Day1 ClassWork simple task: I completed using React and ReactDOM from CDN."
+  "This is my Day2 ClassWork simple task: I completed using React and ReactDOM from CDN."
 );
 
 const list = React.createElement(
