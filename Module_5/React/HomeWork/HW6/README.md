@@ -1,1 +1,1 @@
-<p>Hosted Link: https://react-js-cart-git-main-priyamaitys-projects.vercel.app/</p>
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-teal?style=for-the-badge)](https://geek-react-js-cart.vercel.app/)
