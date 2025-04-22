@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-[Hosted-Link](https://geek-react-bank.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-purple?style=for-the-badge)](https://geek-react-bank.vercel.app/)
