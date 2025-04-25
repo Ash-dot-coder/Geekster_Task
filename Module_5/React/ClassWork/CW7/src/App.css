@@ -2,23 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* body {
-  height: auto;
+body {
+  /* height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: start;
-} */
+  align-items: start; */
+  background: rgba(200, 250, 247, 0.84);
+}
 
 .grocery-container {
   width: 400px;
   margin: 50px auto;
   padding: 20px;
-  background: #f8f9fa;
+  background: rgb(157, 215, 217);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(61, 60, 60, 0.664);
   text-align: center;
 }
 

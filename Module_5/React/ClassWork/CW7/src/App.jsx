@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className='grocery-container'>
-      <h2>Grocery Bud</h2>
+      <h2>Grocery 🛒 Bud</h2>
 
       <Input addItem={addItem} />
       <List
