@@ -1,5 +1,5 @@
 import React from 'react';
-import './CardCSS_TEMP.css';
+import './Card.css';
 import image from '../../assets/hotel.jpg';
 
 const Card = () => {
