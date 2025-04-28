@@ -1,0 +1,40 @@
+.quotes-container {
+    margin: 90px 0;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.quotes-heading {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #0a1128;
+    font-family: "Lavishly Yours", serif;
+}
+
+.quotes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.quote-item {
+    background-color: #b5e2fa;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    max-width: 55rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px dotted #f7a072;
+}
+
+.quote-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #05668d;
+}
+
+.quote-author {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f07167;
+}

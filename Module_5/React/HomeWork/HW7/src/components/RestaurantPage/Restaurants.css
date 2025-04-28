@@ -1,0 +1,138 @@
+.restaurant-container {
+    margin: 70px 0;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.restaurant-heading {
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+    color: #254850;
+    font-family: "Moon Dance", cursive;
+}
+
+.restaurant-controls {
+    display: flex;
+    justify-content: space-around;
+    /* gap: .8em; */
+    margin-bottom: 20px;
+    margin: 15px 65px;
+}
+
+.restaurant-search {
+    padding: 10px;
+    width: 350px;
+    border: 1px solid #9d9d9d;
+    border-radius: 5px;
+}
+
+.rating-filter {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.rating-filter label {
+    margin-right: 10px;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.restaurant-item {
+    background: white;
+    border-radius: 10px;
+    border: 1px dotted #454444;
+    overflow: hidden;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.restaurant-item:hover {
+    transform: scale(1.05);
+}
+
+.restaurant-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.restaurant-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.restaurant-rating {
+    color: #ff9800;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.restaurant-address,
+.restaurant-location {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.food-link {
+    background-color: #15c6b4;
+    margin-top: 30px;
+    height: 75px;
+    margin-bottom: 10px;
+}
+
+.restaurant-food {
+    font-size: 18px;
+    /* color: white; */
+    font-weight: bold;
+    margin: 10px;
+    /* margin-top: auto; */
+}
+
+.restaurant-menu-link {
+    text-decoration: none;
+    color: #454444;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .restaurant-controls {
+        margin: 15px 35px;
+    }
+
+    .restaurant-search {
+        width: 200px;
+    }
+
+    .rating-filter {
+        font-size: 0.8rem;
+    }
+
+    .rating-filter label {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .restaurant-controls {
+        margin: 15px 10px;
+        gap: 15px;
+    }
+
+    .restaurant-search {
+        width: 150px;
+    }
+}

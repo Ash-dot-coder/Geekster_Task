@@ -1,0 +1,227 @@
+.nav-container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: fill;
+    border-radius: 90px;
+}
+
+.menu {
+    display: none;
+}
+
+.menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.pages ul {
+    display: flex;
+    gap: 35px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.pages a:first-child {
+    color: #158c7e;
+    list-style-type: disc;
+}
+
+.pages li:first-child {
+    list-style-type: disc;
+}
+
+.pages ul li::marker {
+    color: #e63946;
+}
+
+.pages a:hover {
+    color: #2fd0bd;
+}
+
+.pages li:hover {
+    list-style-type: disc;
+}
+
+.pages a {
+    text-decoration: none;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #158c7e;
+}
+
+button {
+    background-color: #15c6b4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a6b62;
+    border: 1px solid black;
+}
+
+.hamburger,
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #158c7e;
+}
+
+.mobile-menu button {
+    display: block;
+    margin: 10px auto;
+    background-color: #15c6b4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.mobile-menu button:hover {
+    background-color: #1a6b62;
+}
+
+@media screen and (max-width: 768px) {
+    .pages {
+        display: none;
+    }
+
+    .desktop-btn {
+        display: none;
+    }
+
+    .hamburger {
+        font-size: 2rem;
+        cursor: pointer;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .logo-name {
+        gap: 3px;
+        margin: 3px;
+    }
+
+    .logo-name h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo-img {
+        width: 55px;
+        height: 55px;
+        object-fit: fill;
+        border-radius: 90px;
+    }
+
+    .logo-name {
+        gap: 3px;
+        margin: 3px;
+    }
+
+    .logo-name h1 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        padding: 5px 6px;
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+}

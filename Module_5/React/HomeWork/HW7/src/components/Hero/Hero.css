@@ -1,0 +1,262 @@
+.hero-container {
+    background: url("../../assets/bg2.avif") no-repeat top / cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5rem;
+}
+
+.content {
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 50%;
+    height: 60%;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.content .first-heading {
+    color: #031013;
+    font-family: "Roboto Condensed", serif;
+    font-size: 2.5rem;
+}
+
+.content .second-heading {
+    color: #1a3e44;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Lavishly Yours", serif;
+}
+
+.content p {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.btns {
+    margin: 30px;
+    display: flex;
+}
+
+.btn-1 {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-1:hover {
+    border: 1px solid white;
+}
+
+.btn-2 {
+    background-color: white;
+    color: #15c6b4;
+    margin-left: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-2:hover {
+    border: 1px solid #15c6b4;
+    background-color: transparent;
+    color: #15c6b4;
+}
+
+@media (max-width: 1075px) {
+    .content {
+        width: 60%;
+        height: 60%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-container {
+        padding: 2rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content {
+        width: 70%;
+        padding: 1.5rem;
+    }
+
+    .content .first-heading {
+        font-size: 2rem;
+    }
+
+    .content .second-heading {
+        font-size: 2.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    /* .btns {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    } */
+
+    .btn-1,
+    .btn-2 {
+        width: 30%;
+    }
+}
+
+@media (max-width: 880px) {
+
+    .btn-1,
+    .btn-2 {
+        width: 40%;
+    }
+}
+
+@media (max-width: 795px) {
+    .content {
+        height: 60%;
+        width: 75%;
+        padding: 1.3rem;
+    }
+
+    .btn-1,
+    .btn-2 {
+        width: 35%;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 662px) {
+    .content {
+        width: 80%;
+        height: 60vh;
+        padding: 0.8rem;
+    }
+
+    .btn-1,
+    .btn-2 {
+        width: 38%;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-container {
+        height: 100vh;
+        padding: 1.5rem;
+    }
+
+    .content {
+        width: 100%;
+        height: 50vh;
+        padding: 1rem;
+    }
+
+    .content .first-heading {
+        font-size: 1.8rem;
+    }
+
+    .content .second-heading {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .btns {
+        /* flex-direction: column; */
+        gap: 10px;
+    }
+
+    .btn-1,
+    .btn-2 {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 478px) {
+    .content {
+        width: 100%;
+        height: 50vh;
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 465px) {
+    .content {
+        width: 90%;
+        height: 55vh;
+        padding: 0.6rem;
+    }
+
+    /* .btns {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    } */
+    .btn-1,
+    .btn-2 {
+        font-size: 0.9rem;
+        padding: 8px 13px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .content {
+        width: 85%;
+        height: 60vh;
+        padding: 0.6rem;
+    }
+
+    .btns {
+        margin: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-1,
+    .btn-2 {
+        width: 60%;
+        font-size: 0.9rem;
+        padding: 10px 30px;
+    }
+
+    .btn-2 {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .content {
+        width: 88%;
+        height: 65vh;
+        padding: 0.6rem;
+    }
+
+    .btns {
+        margin: 8px;
+    }
+
+    .btn-1,
+    .btn-2 {
+        width: 65%;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .btn-2 {
+        margin-left: 10px;
+    }
+}

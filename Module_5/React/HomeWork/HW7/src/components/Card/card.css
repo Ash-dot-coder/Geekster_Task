@@ -1,111 +1,118 @@
 .card-container {
-    display: flex;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: 8rem 3rem;
+  position: relative;
+}
+
+.hotel-img {
+  width: 50%;
+  height: 550px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-content {
+  background-color: #cfd7c7;
+  position: absolute;
+  right: 0;
+  padding: 9rem 4rem 9rem 12rem;
+  width: 60%;
+  height: 100vh;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.card-heading {
+  color: #031013;
+  font-family: "Roboto Condensed", serif;
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  font-size: 1.3rem;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #383737;
+}
+
+.card-btn {
+  background: #2d232e;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: #e0ddcf;
+  color: #2d232e;
+}
+
+@media (max-width: 1024px) {
+  .card-container {
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
-    margin: 8rem 3rem;
-    position: relative;
+    text-align: center;
+    margin: 4rem 2rem;
   }
+
   .hotel-img {
-    width: 50%;
-    height: 550px;
-    position: relative;
-    z-index: 2;
+    width: 100%;
+    height: 400px;
   }
+
   .card-content {
-    background-color: #cfd7c7;
-    position: absolute;
-    right: 0;
-    padding: 9rem 4rem 9rem 12rem;
-    width: 60%;
-    height: 100vh;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 4rem 2rem;
   }
+
   .card-heading {
-    color: #031013;
-    font-family: "Roboto Condensed", serif;
-    font-size: 2.3rem;
-    margin-bottom: 15px;
+    font-size: 2rem;
   }
+
   .card-content p {
-    font-size: 1.3rem;
-    padding: 10px;
-    margin-bottom: 15px;
-    color: #383737;
+    font-size: 1.1rem;
   }
+
   .card-btn {
-    background: #2d232e;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
-  .card-btn:hover {
-    background-color: #e0ddcf;
-    color: #2d232e;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    margin: 3rem 1rem;
+    gap: 20px;
   }
-  @media (max-width: 1024px) {
-    .card-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin: 4rem 2rem;
-    }
-  
-    .hotel-img {
-      width: 100%;
-      height: 400px;
-    }
-  
-    .card-content {
-      position: relative;
-      width: 100%;
-      height: auto;
-      padding: 4rem 2rem;
-    }
-  
-    .card-heading {
-      font-size: 2rem;
-    }
-  
-    .card-content p {
-      font-size: 1.1rem;
-    }
-  
-    .card-btn {
-      padding: 12px 20px;
-      font-size: 1rem;
-    }
+
+  .hotel-img {
+    width: 100%;
+    height: 300px;
   }
-  
-  @media (max-width: 600px) {
-    .card-container {
-      margin: 3rem 1rem;
-      gap: 20px;
-    }
-  
-    .hotel-img {
-      width: 100%;
-      height: 300px;
-    }
-  
-    .card-content {
-      padding: 2rem 1.5rem;
-      width: 100%;
-    }
-  
-    .card-heading {
-      font-size: 1.8rem;
-    }
-  
-    .card-content p {
-      font-size: 1rem;
-    }
-  
-    .card-btn {
-      font-size: 0.9rem;
-      padding: 10px 18px;
-    }
+
+  .card-content {
+    padding: 2rem 1.5rem;
+    width: 100%;
   }
+
+  .card-heading {
+    font-size: 1.8rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+  }
+
+  .card-btn {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
