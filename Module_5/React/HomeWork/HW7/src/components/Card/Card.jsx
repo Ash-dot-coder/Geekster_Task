@@ -11,9 +11,8 @@ const Card = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam vero quia amet quos doloribus dicta ipsum omnis libero, ullam aspernatur maiores nobis reprehenderit et enim, porro quo pariatur consequuntur earum eaque est.</p>
                 <button className="card-btn">Get in Touch</button>
             </div>
-
         </div>
     )
 }
 
-export default Card
+export default Card;
