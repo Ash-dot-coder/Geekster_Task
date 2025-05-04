@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './Quiz.css';
 
 const Quiz = () => {
 const [questions, setQuestions] = useState([]);
@@ -61,11 +62,59 @@ const handleNextQuestion  = ()=>{
     }
 };
 
-// pause on line no: 66 (handleSkip)
+const handleSkip = () =>{
+    handleNextQuestion();
+};
 
-  return (
-    <div>Quiz</div>
-  )
+if(error){
+    return(
+        <div className='error-message'>Error: {error}. Please try again later.</div>
+    );
 }
 
-export default Quiz
+if(questions.length === 0){
+    return null;
+}
+
+const options = [
+    ...questions[currentQuestion].incorrect_answers,
+    questions[currentQuestion].correct_answer,
+];
+
+  return (
+    <div className="quiz-container">
+        {showResult?(
+            <div className='result'>
+                <h2>Quiz Completed!</h2>
+                <p>Your Score: {score}/{questions.length}</p>
+                <button className='restart-btn'
+                onClick={()=>window.location.reload()}>
+                    Restart Quiz
+                </button>
+            </div>
+        ):(
+            <div className="question-card">
+                <div className="question-head">
+                    <h2>Question: {currentQuestion + 1}/{questions.length}</h2>
+                    <p className='timer'>time Left: {timeLeft} seconds</p>
+                </div>
+                <h3 className='question-text'
+                dangerouslySetInnerHTML={{
+                    __html: questions[currentQuestion].question,
+                }}/>
+                <div className="options">
+                    {options.map((answer, index) => (
+                        <button key={index}
+                        className='option-btn'
+                        onClick={()=>handleAnswer(answer)}
+                        dangerouslySetInnerHTML={{__html:answer}}/>
+                    ))}
+                </div>
+                <button className='skip-btn' onClick={handleSkip}>Skip</button>
+            </div>
+        )}
+    </div>
+  );
+};
+
+export default Quiz;
