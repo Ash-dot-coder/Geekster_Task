@@ -1,6 +1,7 @@
 ## HOMEWORK : Leetcode Problem
 
 [My LeetCode ID](https://leetcode.com/u/kohreaayush/)
+![My LeetCode ID](./Assets/LeedCode_ID.png)
 
 --------
 
