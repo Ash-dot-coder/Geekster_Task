@@ -9,4 +9,4 @@
 ![Four](./Assets/four.png)
 
 ### Explaination-Video
-[Explaination-Video](./Assets/ExplainingThreeTierArchitecture.mp4)
+![Explaination-Video](./Assets/ExplainingThreeTierArchitecture.mp4)
