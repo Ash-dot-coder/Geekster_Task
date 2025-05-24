@@ -8,5 +8,4 @@
 ![Three](./Assets/three.png)
 ![Four](./Assets/four.png)
 
-### Explaination-Video
-![Explaination-Video](./Assets/ExplainingThreeTierArchitecture.mp4)
+### Explaination Video available on Assets Folder
