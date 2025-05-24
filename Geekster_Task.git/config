@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/Ash-dot-coder/Geekster_Task
+	fetch = +refs/*:refs/*
+	mirror = true
