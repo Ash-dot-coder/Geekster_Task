@@ -1,0 +1,16 @@
+===== Terminal Output =====
+> node app.js
+Choose an option:
+1. Add task
+2. View tasks
+3. Mark task complete
+4. Remove task
+5. Exit
+
+You chose: 1
+Enter task name: code written
+
+Task added!
+
+===== Screenshot Attached Separately =====
+ClassWork/CW2/Assets/TasksAdded.png
