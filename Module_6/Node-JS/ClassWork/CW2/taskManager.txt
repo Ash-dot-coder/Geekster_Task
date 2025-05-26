@@ -1,16 +1,120 @@
-===== Terminal Output =====
-> node app.js
+===== app.js =====
+
+const fs = require("fs");
+const path = require("path");
+const readline = require("readline");
+
+const tasksFilePath = path.join(__dirname, "tasks.json");
+
+function loadTasks() {
+  if (!fs.existsSync(tasksFilePath)) {
+    fs.writeFileSync(tasksFilePath, "[]");
+  }
+  const data = fs.readFileSync(tasksFilePath, "utf8");
+  return JSON.parse(data);
+}
+
+function saveTasks(tasks) {
+  fs.writeFileSync(tasksFilePath, JSON.stringify(tasks, null, 2));
+}
+
+function addTask(name) {
+  const tasks = loadTasks();
+  tasks.push({ name, completed: false });
+  saveTasks(tasks);
+  console.log("✅ Task added!");
+}
+
+function viewTasks() {
+  const tasks = loadTasks();
+  if (tasks.length === 0) {
+    console.log("No tasks found.");
+  } else {
+    console.log("\nYour Tasks:");
+    tasks.forEach((task, index) => {
+      const status = task.completed ? "✔️ Done" : "❌ Not Done";
+      console.log(`${index + 1}. ${task.name} - ${status}`);
+    });
+  }
+}
+
+function markComplete(index) {
+  const tasks = loadTasks();
+  if (index >= 0 && index < tasks.length) {
+    tasks[index].completed = true;
+    saveTasks(tasks);
+    console.log("✅ Task marked as complete!");
+  } else {
+    console.log("❌ Invalid task number.");
+  }
+}
+
+function removeTask(index) {
+  const tasks = loadTasks();
+  if (index >= 0 && index < tasks.length) {
+    tasks.splice(index, 1);
+    saveTasks(tasks);
+    console.log("🗑️ Task removed.");
+  } else {
+    console.log("❌ Invalid task number.");
+  }
+}
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+function showMenu() {
+  console.log(`
 Choose an option:
 1. Add task
 2. View tasks
 3. Mark task complete
 4. Remove task
-5. Exit
+5. Exit`);
+}
 
-You chose: 1
-Enter task name: code written
+function main() {
+  showMenu();
+  rl.question("Enter your choice: ", (choice) => {
+    switch (choice.trim()) {
+      case "1":
+        rl.question("Enter task name: ", (name) => {
+          addTask(name);
+          main();
+        });
+        break;
+      case "2":
+        viewTasks();
+        main();
+        break;
+      case "3":
+        rl.question("Enter task number to mark complete: ", (num) => {
+          markComplete(parseInt(num) - 1);
+          main();
+        });
+        break;
+      case "4":
+        rl.question("Enter task number to remove: ", (num) => {
+          removeTask(parseInt(num) - 1);
+          main();
+        });
+        break;
+      case "5":
+        rl.close();
+        break;
+      default:
+        console.log("❌ Invalid choice.");
+        main();
+    }
+  });
+}
 
-Task added!
+main();
 
-===== Screenshot Attached Separately =====
-ClassWork/CW2/Assets/TasksAdded.png
+===== tasks.json (initial state) =====
+[]
+ 
+===== Screenshot =====
+See screenshot.png file attached in the readme file or in the Assets folder.
