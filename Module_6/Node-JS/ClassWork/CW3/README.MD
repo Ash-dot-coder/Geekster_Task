@@ -80,7 +80,7 @@ node test.js
 ## 🔗 Links
 
 * [👉 View on NPM](https://www.npmjs.com/package/binarysearch_geek)
-* [📁 GitHub Repository](https://github.com/your-github-username/binarysearch_geek)
+* [📁 GitHub Repository](https://github.com/Ash-dot-coder/Geekster_Task/tree/main/Module_6/Node-JS/ClassWork/CW3/binarysearch_geek)
 
 ---
 
