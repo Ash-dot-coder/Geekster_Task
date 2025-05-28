@@ -59,7 +59,7 @@ HW3/
 ## 🧪 Usage
 
 ```js
-const wizard = require("array-wizzard");
+const wizard = require("array-wizzard/index.js");
 
 console.log(wizard.sum([1, 2, 3])); // 6
 console.log(wizard.unique([1, 1, 2, 3])); // [1, 2, 3]
