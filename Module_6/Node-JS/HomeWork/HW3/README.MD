@@ -76,7 +76,7 @@ console.log(wizard.unique([1, 1, 2, 3])); // [1, 2, 3]
 
 ## 📌 License
 
-This project is open-source and free to use under the [MIT License](https://opensource.org/licenses/MIT).
+This project is open-source and free to use under the [ISC License](https://opensource.org/license/isc-license-txt).
 
 ---
 
