@@ -86,7 +86,7 @@ node test.js
 
 ## 📌 License
 
-This project is open-source and free to use under the [MIT License](https://opensource.org/licenses/MIT).
+This project is open-source and free to use under the [ICS License](https://opensource.org/license/isc-license-txt).
 
 ---
 
