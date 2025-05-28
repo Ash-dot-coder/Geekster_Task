@@ -1,4 +1,3 @@
-```markdown
 # 🔍 Binary Search - Geekster CW3
 
 This project contains a simple and efficient implementation of the **Binary Search algorithm** in JavaScript.  
@@ -16,7 +15,6 @@ Here’s the screenshot of successful npm publish:
 
 ## 📁 Project Structure
 
-```
 
 cw3/
 ├── assets/                 → Assets folder
@@ -28,7 +26,6 @@ cw3/
 │   
 └── README.md           → Project documentation (this file)
 
-````
 
 ---
 
