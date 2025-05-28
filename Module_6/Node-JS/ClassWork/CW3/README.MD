@@ -14,8 +14,7 @@ Here’s the screenshot of successful npm publish:
 ---
 
 ## 📁 Project Structure
-
-
+```
 cw3/
 ├── assets/                 → Assets folder
 │   └── packageUploaded.png  → Screenshot of successful npm publish
@@ -25,7 +24,7 @@ cw3/
 │   └── test.js             → Sample usage test
 │   
 └── README.md           → Project documentation (this file)
-
+```
 
 ---
 
