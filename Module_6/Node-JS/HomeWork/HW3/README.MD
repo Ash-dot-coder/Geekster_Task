@@ -14,6 +14,16 @@ Here’s the screenshot of successful npm publish:
 
 ---
 
+## 🎥 Video Explanation
+
+Here’s a short video walkthrough explaining the project and how everything works:
+
+<video src="./Assets/Custom_NpmPackage[ExplainationVideo].mp4" controls width="600"></video>
+
+> 🎙️ This video explains npm, package.json, the 10 array utility functions, and how to publish the package to npm.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -24,7 +34,7 @@ HW3/
 │   └── test.js             → Sample usage test
 ├── Assets/                 → Assets folder
 │   └── packageUploaded.png → Screenshot of successful npm publish
-│
+│   └── Custom_NpmPackage[ExplainationVideo].mp4 → Video explanation file
 └── README.md               → Project documentation (this file)
 ```
 
