@@ -16,11 +16,20 @@ Here’s the screenshot of successful npm publish:
 
 ## 🎥 Video Explanation
 
-Here’s a short video walkthrough explaining the project and how everything works:
+A sample video explanation is available in the `Assets` folder of this project.
 
-<video src="./Assets/Custom_NpmPackage[ExplainationVideo].mp4" controls width="600"></video>
+📁 **Go to:** `./Assets/Custom_NpmPackage[ExplainationVideo].mp4`
 
-> 🎙️ This video explains npm, package.json, the 10 array utility functions, and how to publish the package to npm.
+This video covers:
+- What npm is and how it works
+- The role of `package.json`
+- Explanation of the 10 custom array utility functions
+- How the package was created and published to npm
+
+▶️ [Click here to view the explanation video](https://github.com/Ash-dot-coder/Geekster_Task/blob/main/Module_6/Node-JS/HomeWork/HW3/Assets/Custom_NpmPackage%5BExplainationVideo%5D.mp4)
+
+> 🎙️ This video helps users, reviewers, or clients understand the complete working of the project without needing a code walkthrough.
+
 
 ---
 
