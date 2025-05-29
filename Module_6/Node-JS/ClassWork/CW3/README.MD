@@ -34,7 +34,7 @@ This video covers:
 
 ## 📁 Project Structure
 ```
-cw3/
+CW3/
 ├── assets/                 → Assets folder
 │   ├── NPM-ExplainationVideo.mp4 → Video explanation file
 │   └── packageUploaded.png  → Screenshot of successful npm publish
