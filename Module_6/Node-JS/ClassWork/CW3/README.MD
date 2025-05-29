@@ -13,16 +13,35 @@ Here’s the screenshot of successful npm publish:
 
 ---
 
+## 🎥 Video Explanation
+
+A sample video explanation is available in the `Assets` folder of this project.
+
+📁 **Go to:** `./Assets/NPM-ExplainationVideo.mp4`
+
+This video covers:
+
+* What npm is and how it works
+* The purpose and structure of `package.json`
+* Explanation of the Binary Search algorithm used
+* Step-by-step process of creating and publishing the package to npm
+
+▶️ [Click here to view the explanation video](https://github.com/Ash-dot-coder/Geekster_Task/blob/main/Module_6/Node-JS/ClassWork/CW3/Assets/NPM-ExplainationVideo.mp4)
+
+> 🎙️ This video is designed to help users, mentors, or reviewers understand the full process and logic behind the project — without needing to dive into the code.
+
+---
+
 ## 📁 Project Structure
 ```
 cw3/
 ├── assets/                 → Assets folder
+│   ├── NPM-ExplainationVideo.mp4 → Video explanation file
 │   └── packageUploaded.png  → Screenshot of successful npm publish
 ├── binarysearch_geek/      → Main NPM package folder
 │   ├── index.js            → Binary Search logic
 │   ├── package.json        → NPM configuration
 │   └── test.js             → Sample usage test
-│   
 └── README.md           → Project documentation (this file)
 ```
 
