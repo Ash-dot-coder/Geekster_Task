@@ -23,8 +23,8 @@ This Node.js project scrapes job listings from [TimesJobs](https://www.timesjobs
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/jobs-scraping.git
-cd HW4
+git clone https://github.com/Ash-dot-coder/Geekster_Task.git
+cd Geekster_Task\\Module_6\\Node-JS\\HW4
 ```
 
 ### 2. Install Dependencies
@@ -69,7 +69,7 @@ Each job entry in the Excel file contains:
 
 ---
 ### 📊 Excel Sheet Output  
-[👉 Click here to download Excel sheet](https://github.com/PriyaMaity/Jobs-Scrapping/raw/main/Jobs-Scrapping-1.xlsx)
+[👉 Click here to download Excel sheet](https://github.com/Ash-dot-coder/Geekster_Task/blob/main/Module_6/Node-JS/HomeWork/HW4/Jobs-Scrapping-1.xlsx)
 
 ------
 ## 🧩 Dependencies
