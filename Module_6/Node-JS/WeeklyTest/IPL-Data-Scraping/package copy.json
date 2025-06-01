@@ -1,0 +1,21 @@
+{
+  "name": "ipldata-project",
+  "version": "1.0.0",
+  "description": "scrapping the data from ipl page",
+  "license": "ISC",
+  "author": "priya",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PriyaMaity/IplData-Scrapping.git"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.8",
+    "puppeteer": "^24.6.0"
+  }
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Stats Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #121212;
+        color: #ffffff;
+      }
+      .light-mode {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      select,
+      input,
+      button {
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+      }
+      .chart-section {
+        margin-bottom: 40px;
+        background-color: rgba(255, 228, 228, 0.05);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .chart-section canvas {
+        width: 100% !important;
+        max-width: 700px;
+        margin: auto;
+        display: block;
+      }
+      .loader,
+      .no-results {
+        text-align: center;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      .btn-group {
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>IPL Stats Dashboard</h1>
+
+    <div class="controls">
+      <label for="seasonSelector">Season:</label>
+      <select id="seasonSelector">
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2022">2021</option>
+        <option value="2020">2020</option>
+      </select>
+
+      <label for="teamFilter">Team:</label>
+      <input type="text" id="teamFilter" placeholder="Filter by team..." />
+
+      <label for="playerFilter">Player:</label>
+      <input type="text" id="playerFilter" placeholder="Filter by player..." />
+
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <button onclick="exportCharts()">Download All Charts</button>
+    </div>
+
+    <div id="loader" class="loader" style="display: none">Loading data...</div>
+    <div id="noResults" class="no-results" style="display: none">
+      No results found.
+    </div>
+
+    <!-- Chart Sections -->
+    <div class="chart-section">
+      <h2>🏏 Orange Cap (Top Run Scorers)</h2>
+      <p>Displays the top 10 players with the most runs in a season.</p>
+      <canvas id="orangeCapChart"></canvas>
+      <div class="btn-group">
+        <button onclick="downloadChart('orangeCap', 'OrangeCap')">
+          Download Chart
+        </button>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h2>🔢 Most Fours</h2>
+      <p>
+        Shows players who hit the most boundaries (fours) in the selected
+        season.
+      </p>
+      <canvas id="foursChart"></canvas>
+      <div class="btn-group">
+        <button onclick="downloadChart('fours', 'MostFours')">
+          Download Chart
+        </button>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h2>💥 Most Sixes</h2>
+      <p>Shows players with the highest number of sixes in a season.</p>
+      <canvas id="sixesChart"></canvas>
+      <div class="btn-group">
+        <button onclick="downloadChart('sixes', 'MostSixes')">
+          Download Chart
+        </button>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h2>💯 Most Centuries</h2>
+      <p>Displays players who scored the most hundreds in the season.</p>
+      <canvas id="centuriesChart"></canvas>
+      <div class="btn-group">
+        <button onclick="downloadChart('centuries', 'MostCenturies')">
+          Download Chart
+        </button>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h2>🧢 Most Fifties</h2>
+      <p>Players who scored the most fifties during the selected IPL season.</p>
+      <canvas id="fiftiesChart"></canvas>
+      <div class="btn-group">
+        <button onclick="downloadChart('fifties', 'MostFifties')">
+          Download Chart
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function getAlternatingColors(count) {
+        const isLight = document.body.classList.contains("light-mode");
+        const colorA = isLight ? "#ef233c" : "#83c5be";
+        const colorB = isLight ? "#ffff3f" : "#ff99c8";
+        const colors = [];
+        for (let i = 0; i < count; i++) {
+          colors.push(i % 2 === 0 ? colorA : colorB);
+        }
+        return colors;
+      }
+
+      function getTeamFromPlayer(p) {
+        if (p.team) {
+          return p.team.toLowerCase();
+        }
+        const parts = p.player.split("\n");
+        return parts.length > 1 ? parts[1].trim().toLowerCase() : "";
+      }
+
+      function getAxisColor() {
+        return document.body.classList.contains("light-mode") ? "#000" : "gray";
+      }
+
+      const ctxOrange = document
+        .getElementById("orangeCapChart")
+        .getContext("2d");
+      const ctxFours = document.getElementById("foursChart").getContext("2d");
+      const ctxSixes = document.getElementById("sixesChart").getContext("2d");
+      const ctxCenturies = document
+        .getElementById("centuriesChart")
+        .getContext("2d");
+      const ctxFifties = document
+        .getElementById("fiftiesChart")
+        .getContext("2d");
+      const charts = {};
+
+      function updateChart(
+        chartInstance,
+        canvas,
+        title,
+        labels,
+        values,
+        label,
+        playersData
+      ) {
+        if (chartInstance) chartInstance.destroy();
+        const barColors = getAlternatingColors(labels.length);
+        const axisColor = getAxisColor();
+
+        return new Chart(canvas, {
+          type: "bar",
+          data: {
+            labels,
+            datasets: [
+              {
+                label,
+                data: values,
+                backgroundColor: barColors,
+                borderColor: barColors,
+                borderWidth: 2,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              title: {
+                display: true,
+                text: title,
+                color: axisColor,
+              },
+              tooltip: {
+                callbacks: {
+                  afterLabel: function (context) {
+                    return "";
+                  },
+                },
+              },
+              legend: {
+                display: false,
+              },
+            },
+            scales: {
+              x: {
+                ticks: { color: axisColor },
+                grid: { color: axisColor },
+              },
+              y: {
+                beginAtZero: true,
+                ticks: { color: axisColor },
+                grid: { color: axisColor },
+              },
+            },
+          },
+        });
+      }
+
+      function toggleLoader(show) {
+        document.getElementById("loader").style.display = show
+          ? "block"
+          : "none";
+      }
+
+      async function loadData() {
+        toggleLoader(true);
+        const season = document.getElementById("seasonSelector").value;
+        const playerFilter = document
+          .getElementById("playerFilter")
+          .value.toLowerCase();
+        const teamFilter = document
+          .getElementById("teamFilter")
+          .value.toLowerCase();
+        const response = await fetch("./processedData1.json");
+        const data = await response.json();
+        const categories = data[season];
+        const filtered = {};
+        const filterFn = (p) => {
+          return (
+            (!playerFilter || p.player.toLowerCase().includes(playerFilter)) &&
+            (!teamFilter || getTeamFromPlayer(p).includes(teamFilter))
+          );
+        };
+
+        for (let cat in categories) {
+          filtered[cat] = categories[cat].filter(filterFn);
+        }
+        const noResults = Object.values(filtered).every(
+          (arr) => arr.length === 0
+        );
+        document.getElementById("noResults").style.display = noResults
+          ? "block"
+          : "none";
+        charts.orangeCap = updateChart(
+          charts.orangeCap,
+          ctxOrange,
+          "Top Run Scorers",
+          filtered.orangeCap.map((p) => p.player),
+          filtered.orangeCap.map((p) => p.runs),
+          "Runs"
+        );
+        charts.fours = updateChart(
+          charts.fours,
+          ctxFours,
+          "Most Fours",
+          filtered.mostFours.map((p) => p.player),
+          filtered.mostFours.map((p) => p.fours),
+          "Fours"
+        );
+        charts.sixes = updateChart(
+          charts.sixes,
+          ctxSixes,
+          "Most Sixes",
+          filtered.mostSixes.map((p) => p.player),
+          filtered.mostSixes.map((p) => p.sixes),
+          "Sixes"
+        );
+        charts.centuries = updateChart(
+          charts.centuries,
+          ctxCenturies,
+          "Most Centuries",
+          filtered.mostCenturies.map((p) => p.player),
+          filtered.mostCenturies.map((p) => p.centuries),
+          "Centuries"
+        );
+        charts.fifties = updateChart(
+          charts.fifties,
+          ctxFifties,
+          "Most Fifties",
+          filtered.mostFifties.map((p) => p.player),
+          filtered.mostFifties.map((p) => p.fifties),
+          "Fifties"
+        );
+        toggleLoader(false);
+      }
+
+      function toggleTheme() {
+        document.body.classList.toggle("light-mode");
+        loadData();
+      }
+
+      function downloadChart(chartKey, fileName) {
+        const link = document.createElement("a");
+        link.download = fileName + ".png";
+        link.href = charts[chartKey].toBase64Image();
+        link.click();
+      }
+
+      function exportCharts() {
+        for (const key in charts) {
+          downloadChart(key, key);
+        }
+      }
+
+      document
+        .getElementById("seasonSelector")
+        .addEventListener("change", loadData);
+      document
+        .getElementById("playerFilter")
+        .addEventListener("input", loadData);
+      document.getElementById("teamFilter").addEventListener("input", loadData);
+
+      window.onload = loadData;
+    </script>
+  </body>
+</html>
