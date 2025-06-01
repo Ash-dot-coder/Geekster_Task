@@ -1,0 +1,72 @@
+// console.log("Hey! - Web Scrapper");
+
+// const puppeteer = require("puppeteer")
+import puppeteer from "puppeteer";
+import fs from "node:fs";
+import xlsx from "xlsx";
+
+/*
+- Scrape amazon.in listing screen and extract information - product title, price & rating
+- Algorithm
+    0. Install a browser
+    1. Open browser
+    2. Open amazon.in
+    3. Type shoes in searchbox and click search icon
+    4. Wait for the page to load
+    5. when the page loads extract the required data
+*/
+
+try {
+  // Step 1
+  const browser = await puppeteer.launch(); //  Open a browser
+  const page = await browser.newPage(); //  Open a new tab in browser
+
+  await page.goto("https://www.amazon.in/", { waitUntil: "domcontentloaded" });
+
+  await page.type("#twotabsearchtextbox", "sport shoes under 2000 rs"); //  Typed my search query in search box
+  await page.click("#nav-search-submit-button"); //  Click on search icon
+  await page.waitForNavigation({ waitUntil: "networkidle2" }); //  Wait for the page to load with the list of products
+
+  const products = await page.evaluate(() => {
+    const productCards = document.querySelectorAll(".s-result-item");
+    const productDetails = [];
+
+    productCards.forEach((product) => {
+      const brand = product.querySelector("h2 span")
+        ? product.querySelector("h2 span").innerText
+        : "";
+      const title = product.querySelector("a>h2> span")
+        ? product.querySelector("a>h2> span").innerText
+        : "";
+      const price = product.querySelector(".a-price-whole")
+        ? product.querySelector(".a-price-whole").innerText
+        : "";
+      const rating = product.querySelector(".a-icon-alt")
+        ? product.querySelector(".a-icon-alt").innerText
+        : "NA";
+
+      productDetails.push({ brand, title, price, rating });
+    });
+    return productDetails;
+  });
+  console.log(products);
+
+  // Card selector => .s-result-item
+  // Title slector -> document.querySelector("h2 span")
+  // Price ->
+  // Rating ->
+
+  await browser.close();
+
+  //   fs.writeFile("products.json", JSON.stringify(products));
+
+  const workbook = xlsx.utils.book_new(); //  Create new excel file object
+  const sheet = xlsx.utils.json_to_sheet(products);
+
+  xlsx.utils.book_append_sheet(workbook, sheet, "Amazon Products");
+  xlsx.writeFile(workbook, "Products-amazon.xlsx")
+
+  console.log("Products saved successfully in Excel File..");
+} catch (err) {
+  console.log(err);
+}
