@@ -4,6 +4,11 @@ A project that scrapes IPL player stats from the official [IPL website](https://
 
 ---
 
+##  👨🏻‍💻 Live - Hosted
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-teal?style=for-the-badge)](https://ash-dot-coder.github.io/Geekster_Task/Module_6/Node-JS/WeeklyTest/IPL-Data-Scraping/index.html)
+
+---
+
 ## 📌 Features
 
 - 🧠 Scrapes real-time IPL stats using Puppeteer
@@ -40,8 +45,8 @@ IPLDATA-PROJECT/
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/PriyaMaity/IplData-Scrapping.git]
-cd IPLDATA-PROJECT
+git clone [https://github.com/Ash-dot-coder/Geekster_Task]
+cd Module_6\Node-JS\WeeklyTest\IPL-Data-Scraping
 ```
 
 ### 2. Install Dependencies
@@ -100,12 +105,11 @@ You may also want to add `.json` files if you don’t want to push scraped data 
 
 To deploy the dashboard online:
 
-### 📌 Vercel (Optional)
+### 📌 Github 
 
 1. Push to GitHub
-2. Go to [vercel.com](https://vercel.com)
+2. Go to [Github.com](https://Github.com)
 3. Import the repo, set the root folder if needed
-4. Click **Deploy**
 
 ---
 
