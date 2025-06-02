@@ -24,7 +24,7 @@ Follow these steps to run it on your machine:
    ```bash
    git clone https://github.com/your-username/random-jokes-api.git
    cd random-jokes-api
-````
+```
 
 2. **Install dependencies**
 
