@@ -16,14 +16,6 @@ The goal of this project is to strengthen backend development skills by:
 
 ---
 
-## 🌍 Live Demo
-
-Access the live API here:  
-🔗 [https://random-jokes-api.onrender.com/api/joke/random](https://random-jokes-api.onrender.com/api/joke/random)  
-*(Update the link once deployed)*
-
----
-
 ## ⚙️ Setup & Installation (Local)
 
 Follow these steps to run it on your machine:
