@@ -115,7 +115,7 @@ To deploy the dashboard online:
 
 ## 🙋‍♂️ Author
 
-Made with 👨🏻‍💻 by [Ayush Kohre]()
+Made with 👨🏻‍💻 by [Ayush Kohre](https://github.com/Ash-dot-coder)
 
 ---
 
