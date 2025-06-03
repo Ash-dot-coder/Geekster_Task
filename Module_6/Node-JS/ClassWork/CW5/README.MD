@@ -93,9 +93,5 @@ If you face issues with Postman or server startup, make sure:
 * No other app is using port 3000
 * You've installed Node.js and Express correctly
 
-```
 
 ---
-
-Let me know once you deploy it so I can update the `Live Demo` link with your actual hosted URL. Want me to help you deploy it right now?
-```
