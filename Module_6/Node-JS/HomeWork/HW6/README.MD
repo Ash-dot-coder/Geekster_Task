@@ -140,9 +140,9 @@ While the client IP address is logged, it's solely for learning/demo purposes an
 ## 👨‍💻 Author
 
 **Ayush Kohre**
-🚀 Back-end Developer (in training)
-🔗 [GitHub](https://github.com/ash-dot-coder)
-💡 Passionate about clean code, middleware, and learning backend systems.
+* 🚀 Back-end Developer (in training)
+* 🔗 [GitHub](https://github.com/ash-dot-coder)
+* 💡 Passionate about clean code, middleware, and learning backend systems.
 
 ---
 
